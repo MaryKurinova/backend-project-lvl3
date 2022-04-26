@@ -10,9 +10,12 @@ parserOptions:
   ecmaVersion: latest
   sourceType: module
 rules:
-  no-console: 0
-  import/extensions:
-    - error
-    - ignorePackages
-    - js: always
+  no-console: off
+  import/prefer-default-export: off
+  import/extensions: off
+  import/no-named-as-default: off
+  consistent-return: off
+  import/named: off
+  implicit-arrow-linebreak: off
   no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+

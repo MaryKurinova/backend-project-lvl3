@@ -25,7 +25,7 @@ const scope = nock(pageUrl.origin).persist();
 
 beforeAll(async () => {
   outputDir = await fsp.mkdtemp(join(os.tmpdir(), 'page-loader-'));
-  expectedPageContent = await getFixture('courses.html');
+  expectedPageContent = await getFixture('hexlet.html');
   scope.get(pageUrl.pathname).reply(200, expectedPageContent);
 });
 

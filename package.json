@@ -2,7 +2,7 @@
   "name": "backend-project-lvl3",
   "version": "1.0.0",
   "description": "Page Loader",
-  "main": "src/load.js",
+  "main": "src/index.js",
   "type": "module",
   "bin": {
     "page-loader": "bin/page-loader.js"

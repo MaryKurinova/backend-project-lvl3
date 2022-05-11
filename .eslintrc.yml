@@ -17,5 +17,6 @@ rules:
   consistent-return: off
   import/named: off
   implicit-arrow-linebreak: off
+  import/no-extraneous-dependencies: off
   no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
 

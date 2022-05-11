@@ -1,21 +1,27 @@
 #!/usr/bin/env node
-
 import { Command } from 'commander';
-import process from 'process';
-import pageLoader from '../src/pageLoader.js';
+import { readFileSync } from 'fs';
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import loadingPage from '../src/index.js';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const { version } = JSON.parse(readFileSync(path.resolve(__dirname, '../package.json')));
 const program = new Command();
-
 program
-  .description('Page loader utility.')
-  .version('0.0.1')
-  .argument('<url>')
-  .option('-o, --output [dir]', 'Output dir', process.cwd())
-  .action((url, options) => pageLoader(url, options.output)
-    .then((filepath) => console.log(`Page was loaded to ${filepath}`))
-    .catch((err) => {
-      console.error(`${err.message} with url ${url}`);
-      process.exit(1);
-    }));
+  .version(version, '-v, --version', 'output the version number')
+  .option('-o, --output [dir]', 'output dir', process.cwd())
+  .arguments('<url>')
+  .action((url) => {
+    const { output } = program.opts();
+    loadingPage(url, output)
+      .then((outPath) => console.log(outPath))
+      .catch((err) => {
+        console.error(err.message);
+        process.exit(1);
+      });
+  });
 
 program.parse(process.argv);

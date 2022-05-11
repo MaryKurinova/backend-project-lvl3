@@ -3,7 +3,7 @@ import { Command } from 'commander';
 import { readFileSync } from 'fs';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import loadingPage from '../src/index.js';
+import loadingPage from '../src/load';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

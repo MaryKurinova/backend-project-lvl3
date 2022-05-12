@@ -1,15 +1,15 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "Page Loader",
   "main": "src/index.js",
-  "type": "module",
-  "bin": {
+    "bin": {
     "page-loader": "bin/page-loader.js"
   },
   "scripts": {
     "test": "npx jest"
   },
+  "description": "Page Loader",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MaryKurinova/backend-project-lvl3.git"

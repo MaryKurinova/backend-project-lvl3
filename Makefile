@@ -13,4 +13,5 @@ lint:
 publish:
 	npm publish --dry-run
 
-.PHONY: test
+test-debug:
+	DEBUG=nock.*,axios npm test

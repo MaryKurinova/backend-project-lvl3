@@ -4,7 +4,7 @@ import debug from 'debug';
 import Listr from 'listr';
 import { constants } from 'fs';
 import path from 'path';
-import { fetchPage, getCurrentPath, extractResourses } from './resource';
+import { fetchPage, getCurrentPath, extractResourses } from './resource.js';
 
 debug('booting %o', 'page-loader');
 

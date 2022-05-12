@@ -8,15 +8,6 @@
 <html>
  <head>
   <meta charset="utf-8">
-  <title>Цвет горизонтальной линии</title>
-  <style>
-   hr {
-    border: none;
-    background-color: red;
-    color: red;
-    height: 1,5px;
-   }
-  </style>
  </head>
  <body>
   <hr>

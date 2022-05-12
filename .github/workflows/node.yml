@@ -17,11 +17,10 @@ jobs:
         node-version: [16.x]
     steps:
       - uses: actions/checkout@v2
-
       - name: Use Node.js ${{ matrix.node-version }}
         # Configures the node version used on GitHub-hosted runners
         # https://github.com/actions/setup-node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         # The Node.js version to configure
         with:
           node-version: ${{ matrix.node-version }}
